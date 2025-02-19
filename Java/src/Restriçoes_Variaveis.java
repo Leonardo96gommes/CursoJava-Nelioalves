@@ -6,15 +6,15 @@ public class Restriçoes_Variaveis {
         //• Não pode ter espaço em branco
         //• Sugestão: use nomes que tenham um significado
 
-        Errado:
-        int 5minutes;
-        int salário;
-        int salario do funcionario;
+        // Errado:
+        // int 5minutes;
+        // int salário;
+        // int salario do funcionario;
 
-        Correto:
-        int _5minutes;
-        int salario;
-        int salarioDoFuncionario;
+        // Correto:
+        // int _5minutes;
+        // int salario;
+        // int salarioDoFuncionario;
 
 
         //Convenções
