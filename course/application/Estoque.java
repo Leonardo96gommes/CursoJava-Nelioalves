@@ -5,7 +5,7 @@ import entities.Produto; // Importa a classe Produto do pacote entities
 import java.util.Locale; // Importa a classe Locale para configuração regional
 import java.util.Scanner; // Importa a classe Scanner para entrada de dados
 
-public class Programa { // Declaração da classe principal
+public class Estoque { // Declaração da classe principal
     public static void main(String[] args) { // Método principal
         Locale.setDefault(Locale.US); // Define a localidade padrão para US
         Scanner sc = new Scanner(System.in); // Cria um objeto Scanner para entrada de dados
