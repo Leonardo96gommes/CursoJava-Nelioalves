@@ -5,6 +5,20 @@ public class Produto { // Declaração da classe Produto
     public double preco; // Atributo para o preço do produto
     public int quantidade; // Atributo para a quantidade no estoque
 
+    public  Produto() { // Construtor padrão
+    }
+
+    public Produto(String nome, double preco, int quantidade) { // Construtor padrão
+        this.nome = nome; // Inicializa o nome do produto
+        this.preco = preco; // Inicializa o preço do produto
+        this.quantidade = quantidade; // Inicializa a quantidade no estoque
+    }
+
+    public Produto(String nome, double preco) { // Construtor padrão
+        this.nome = nome; // Inicializa o nome do produto
+        this.preco = preco; // Inicializa o preço do produto
+    }
+
     public double valorTotalEmEstoque() { // Método para calcular o valor total em estoque
         return preco * quantidade; // Retorna o valor total em estoque
     }

@@ -9,27 +9,23 @@ public class Estoque { // Declaração da classe principal
     public static void main(String[] args) { // Método principal
         Locale.setDefault(Locale.US); // Define a localidade padrão para US
         Scanner sc = new Scanner(System.in); // Cria um objeto Scanner para entrada de dados
+        Produto p = new Produto(); // Instancia um objeto da classe Produto com o construtor padrão
 
-        Produto produto = new Produto(); // Cria uma nova instância da classe Produto
         System.out.println("Enter Produto Data:"); // Exibe uma mensagem para o usuário
         System.out.print("Nome: "); // Solicita o nome do produto
-        produto.nome = sc.nextLine(); // Lê o nome do produto
+        String nome = sc.nextLine(); // Lê o nome do produto
         System.out.print("Preço: "); // Solicita o preço do produto
-        produto.preco = sc.nextDouble(); // Lê o preço do produto
-        System.out.print("Quantidade no estoque: "); // Solicita a quantidade no estoque
-        produto.quantidade = sc.nextInt(); // Lê a quantidade no estoque
-
+        double preco = sc.nextDouble(); // Lê o preço do produto
+        Produto produto = new Produto(nome, preco); // Instancia um objeto da classe Produto
         System.out.println(); // Pula uma linha
         System.out.println("Produto data: " + produto.toString()); // Exibe os dados do produto
         System.out.println(); // Pula uma linha
         System.out.print("Entre com uma quantidade de produtos a serem adicionados no estoque: "); // Solicita a quantidade de produtos a serem adicionados no estoque
-
         int quantidade = sc.nextInt(); // Lê a quantidade de produtos a serem adicionados no estoque
         produto.adicionarProdutos(quantidade); // Adiciona a quantidade de produtos no estoque
         System.out.println(); // Pula uma linha
         System.out.println("Update data: " + produto.toString()); // Exibe os dados do produto
         System.out.println(); // Pula uma linha
-
         System.out.print("Entre com uma quantidade de produtos a serem removidos do estoque: "); // Solicita a quantidade de produtos a serem removidos do estoque
         quantidade = sc.nextInt(); // Lê a quantidade de produtos a serem removidos do estoque
         produto.removerProdutos(quantidade); // Remove a quantidade de produtos do estoque

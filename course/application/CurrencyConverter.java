@@ -15,7 +15,7 @@ public class CurrencyConverter { // Declaração da classe principal
         System.out.print("Quantos dólares serão comprados? "); // Solicita a quantidade de dólares a ser comprada
         double amount = sc.nextDouble(); // Lê a quantidade de dólares
         double result = dollarPrice * amount + iof.tax(dollarPrice * amount); // Calcula o valor total a ser pago em reais, incluindo o IOF
-        System.out.printf("Valor a ser pago em reais = %.2f%n", result); // Exibe o valor total a ser pago em reais
+        System.out.printf("Valor a ser pago em reais com IOF incluso = %.2f%n", result); // Exibe o valor total a ser pago em reais
 
         sc.close(); // Fecha o Scanner
     }
