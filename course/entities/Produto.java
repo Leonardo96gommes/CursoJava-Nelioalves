@@ -19,24 +19,24 @@ public class Produto { // Declaração da classe Produto
         this.preco = preco; // Inicializa o preço do produto
     }
 
-    public String getNome() { // Método para obter o nome do produto
-        return nome; // Retorna o nome do produto
+    public String getNome() {
+        return nome;
     }
 
-    public void setNome(String nome) { // Método para obter o nome do produto
-        this.nome = nome; // Retorna o nome do produto
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public double getPreco() { // Método para obter o preço do produto
-        return preco; // Retorna o preço do produto
+    public double getPreco() {
+        return preco;
     }
 
-    public void setPreco(double preco) { // Método para definir o preço do produto
-        this.preco = preco; // Define o preço do produto
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 
-    public int getQuantidade() { // Método para obter a quantidade no estoque
-        return quantidade; // Retorna a quantidade no estoque
+    public int getQuantidade() {
+        return quantidade;
     }
 
 
