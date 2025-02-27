@@ -17,6 +17,13 @@ public class Estoque { // Declaração da classe principal
         System.out.print("Preço: "); // Solicita o preço do produto
         double preco = sc.nextDouble(); // Lê o preço do produto
         Produto produto = new Produto(nome, preco); // Instancia um objeto da classe Produto
+
+        produto.setNome("Computador"); // Define o nome do produto
+        System.out.println("Nome atualizado: " + produto.getNome()); // Exibe o nome do produto
+        produto.setPreco(1200.00); // Define o preço do produto
+        System.out.println("Preço atualizado: " + produto.getPreco()); // Exibe o preço do produto
+
+
         System.out.println(); // Pula uma linha
         System.out.println("Produto data: " + produto.toString()); // Exibe os dados do produto
         System.out.println(); // Pula uma linha
