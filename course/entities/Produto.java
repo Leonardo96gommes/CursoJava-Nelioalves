@@ -1,7 +1,7 @@
 package entities; // Define o pacote da classe
 
 public class Produto { // Declaração da classe Produto
-    private String nome; // Atributo para o nome do produto
+    String nome; // Atributo para o nome do produto
     private double preco; // Atributo para o preço do produto
     private int quantidade; // Atributo para a quantidade no estoque
 
