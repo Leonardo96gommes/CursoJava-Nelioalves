@@ -18,20 +18,29 @@ public class Program {
         System.out.println("Quantos funcionários serão registrados?");
         int n = sc.nextInt(); // Lê o número de funcionários a serem registrados
 
-        for (int i = 1; i <= n; i++) { // Loop para registrar cada funcionário
+        for (int i = 1; i <= n; i++) {
             System.out.println();
             System.out.println("Funcionário #" + i + ":");
-            System.out.print("Id: ");
-            Integer id = sc.nextInt(); // Lê o ID do funcionário
-            System.out.print("Nome: ");
-            sc.nextLine(); // Consome a quebra de linha pendente
-            String name = sc.nextLine(); // Lê o nome do funcionário
-            System.out.print("Salário: ");
-            Double salary = sc.nextDouble(); // Lê o salário do funcionário
-            Employees emp = new Employees(id, name, salary); // Cria um novo objeto Employees
 
-            list.add(emp); // Adiciona o objeto Employees à lista
+            int id;
+            do {
+                System.out.print("Id: ");
+                id = sc.nextInt();
+                if (hasId(list, id) != null) {
+                    System.out.println("Este ID já existe! Tente novamente.");
+                }
+            } while (hasId(list, id) != null);
+
+            System.out.print("Nome: ");
+            sc.nextLine();
+            String name = sc.nextLine();
+            System.out.print("Salário: ");
+            Double salary = sc.nextDouble();
+
+            Employees emp = new Employees(id, name, salary);
+            list.add(emp);
         }
+
 
         System.out.println("Digite o id do funcionário que terá aumento de salário: ");
         System.out.println();
@@ -55,12 +64,13 @@ public class Program {
         sc.close(); // Fecha o Scanner
     }
 
-    public Integer hasId(List<Employees> list, int id) {
-        for (int i = 0; i < list.size(); i++) { // Itera sobre a lista de funcionários
-            if (list.get(i).getId() == id) { // Verifica se o ID corresponde
-                return i; // Retorna o índice do funcionário
+    public static Integer hasId(List<Employees> list, int id) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getId() == id) {
+                return i;
             }
         }
-        return null; // Retorna null se o ID não for encontrado
+        return null;
     }
+
 }
