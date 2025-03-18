@@ -32,7 +32,3 @@ public class DataTexto {
         System.out.println("dt06: " + dt06.toString());
     }
 }
-
-
-    }
-}
